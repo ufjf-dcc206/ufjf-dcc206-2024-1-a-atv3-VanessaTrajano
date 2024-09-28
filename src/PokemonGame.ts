@@ -52,11 +52,13 @@ class PokemonsGame extends HTMLElement {
           justify-content: space-around;
         }
         .game-area {
-          height: 150px;
+          height: 210px;
+          width:100%;
           border: 2px dashed #ccc;
           display: flex;
           justify-content: center;
           align-items: center;
+
         }
       </style>
       <div class="game">
@@ -100,17 +102,19 @@ class PokemonsGame extends HTMLElement {
         this.currentPlayer = this.currentPlayer === "A" ? "B" : "A";
       }
       if (this.gameArea.children.length === 2) {
-        this.count += 1
+        this.count += 1;
         setTimeout(() => {
           alert(`Fim da rodada ${this.count}!`);
           this.gameArea.innerHTML = "";
-          if(this.count === 5){
-            alert("O jogo acabou!")
+          if (this.count === 5) {
+            alert("O jogo acabou!");
           }
         }, 1000);
       }
+    } else {
+      alert(`É a vez do jogador ${this.currentPlayer}`);
     }
   }
 }
 
-customElements.define("pokemons-game", PokemonsGame);
+customElements.define("pokemons-game", PokemonsGame);
