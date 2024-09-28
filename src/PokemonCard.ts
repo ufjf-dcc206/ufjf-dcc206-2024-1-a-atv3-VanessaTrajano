@@ -1,5 +1,4 @@
 import { Pokemon } from "./Pokemon.ts";
-import "./style.css";
 
 export default class PokemonCard extends HTMLElement {
   private pokemon: Pokemon;
