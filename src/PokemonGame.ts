@@ -56,7 +56,7 @@ class PokemonsGame extends HTMLElement {
           width:100%;
           border: 2px dashed #ccc;
           display: flex;
-          justify-content: center;
+          justify-content: space-evenly;
           align-items: center;
 
         }
